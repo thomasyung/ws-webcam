@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Helvetica Neue", helvetica, arial;
+        padding: 15px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        line-height: 1.4;
+      }
+    </style>
+
+    <script>
+    function init() {
+      var host = location.origin.replace(/^http/, 'ws')
+      var ws = new WebSocket(host);
+      ws.onmessage = function (event) {
+        msg = JSON.parse(event.data);
+        console.log(msg);
+        var li = document.createElement('li');
+        li.innerHTML = msg.message;
+        document.querySelector('#messages').appendChild(li);
+      };
+      var message = document.querySelector('#message');
+      var send = document.querySelector('#send');
+      send.addEventListener('click', function() {
+        var obj = {};
+        obj.evt = 'send';
+        obj.message = message.value;
+        ws.send(JSON.stringify(obj));
+      }, false);
+    }
+    window.onload = init;
+    </script>
+  </head>
+  <body>
+    <input id="message" type="text" value="">
+    <button id="send">Send</button>
+    <h1>Messages</h1>
+    <ul id='messages'></ul>
+  </body>
+</html>

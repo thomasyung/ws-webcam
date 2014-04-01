@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: .8em;
+}
+input[type="password"], input[type="number"], input[type="text"] {
+	width: 100%;
+	font-size: 16px;
+}
+img {
+	border: 0;
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+a:visited {
+	color: #0000ff;
+}
+a:active {
+	color: #ff0000;
+}
+#container {
+	max-width: 60em;
+	margin: 0 auto;
+}
+#header {
+	margin: 0 1em;
+}
+#content {
+	font-size: 16px;
+	margin: .5em;
+}
+#actionbar {
+	position: fixed;
+	bottom: 0;
+	background: #dddeee;
+	background-color: rgba(221, 222, 238, .95);
+	width: 100%;
+	padding: .5em;
+	border-top: 1px solid #ccc;
+}
+#message_area {
+	margin-left: 1em;
+	color: red;
+	font-weight: bold;
+}
+#scroller {
+	position: fixed;
+	right: .5em;
+	bottom: 4em;
+}
+#scroller a {
+	text-decoration: none;
+	font-size: 16px;
+}
+#scroller .arrow-up {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid blue;
+}
+#scroller .arrow-down {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid blue;
+}
+#img {
+	width: 100%;
+}
+.img_selected {
+	border: 1px solid red;
+}
+#snapshots_display ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#snapshots_display li {
+	margin: .5em;
+	display: block;
+}
+.button-link {
+	background: none !important;
+	border: none; 
+	color: blue;
+	cursor: pointer;
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	padding: 0 !important;
+}
+.col_two {
+	padding: .5em;
+	font-size: 16px;
+}
+@media screen and (orientation:landscape) {
+	#img {
+		width: auto;
+	}
+	.col_one, .col_two {
+		display: inline-block;
+	}
+	.col_one {
+		width: 50%;
+	}
+	.col_two {
+		width: 48%;
+		vertical-align: top;
+	}
+}
+@media screen and (min-width: 23em) {
+	#snapshots_display li {
+		display: inline-block;
+	}
+}
