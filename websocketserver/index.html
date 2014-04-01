@@ -19,7 +19,7 @@
 
     <script>
     function init() {
-      var host = location.protocol.replace(/^http/, 'ws');
+      var host = 'ws://' + location.host;
       var ws = new WebSocket(host);
       ws.onmessage = function (event) {
         msg = JSON.parse(event.data);
