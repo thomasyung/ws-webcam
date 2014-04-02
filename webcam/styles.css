@@ -26,6 +26,16 @@ a:visited {
 a:active {
 	color: #ff0000;
 }
+#blankscreen {
+	display: none;
+	background-color: black;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
 #container {
 	max-width: 60em;
 	margin: 0 auto;

@@ -42,6 +42,15 @@ function init() {
 	}
 	get_cfg_req.open("GET", "config.json", true);
 	get_cfg_req.send();
+	// Enable option to blank the screen (save energy)
+	var  blankscreen = document.querySelector('#blankscreen');
+	var blankscreen_enable = document.querySelector('#blankscreen_enable');
+	blankscreen_enable.addEventListener('click', function(e){
+		blankscreen.style.display = 'block';
+	});
+	blankscreen.addEventListener('click', function(e){
+		blankscreen.style.display = 'none';
+	});
 	// Prepare buffers to store lightness data.
     for (var i = 0; i < 2; i++) {
 		buffers.push(new Uint8Array(320 * 240));
@@ -235,6 +244,7 @@ window.onload = init;
 </script>
 </head>
 <body>
+	<div id="blankscreen"></div>
 	<div id="container">
 		<div id="menu" class="menu_toggle_close">
 			<ul>
@@ -259,6 +269,10 @@ window.onload = init;
 		    <p><b>Motion Detection:</b> <span id="motiondetectdisplay">UNKNOWN</span> / <button id="motiondetecttoggle" class="button-link">TOGGLE</button></p>
 			<p><b>Request status:</b> <span id="log"></span></p>
 		</div>
+	</div>
+	<div id="actionbar">
+		<button id="blankscreen_enable" class="button-link">Blank screen</button>
+		<span id="message_area"></span>
 	</div>
 </body>
 </html>

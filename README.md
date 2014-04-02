@@ -108,12 +108,15 @@ Device/browser/OS configurations I tested and support are:
 * Chrome on Windows, Mac, and Android
 * FireFox on Windows, Mac, and Android
 
-
-1. Start the webcam app on the recorder device by going to the webcam URL.
+Start the webcam app on the recorder device by going to the webcam URL.
 eg. myserver.com/webcam/ and then selecting "Start Webcam" from the Menu.
-2. If your device supports the getUserMedia streams API, you will be asked
+
+If your device supports the getUserMedia streams API, you will be asked
 permission to access the camera. When you choose "yes", the camera will
 automatically start streaming.
+
+There is an option to **Blank screen** so that the device uses less energy.
+Battery-life should improve when you select that option, especially if you are using a smartphone.
 
 ### View webcam
 
