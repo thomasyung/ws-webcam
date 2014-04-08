@@ -101,7 +101,7 @@ require_once('auth.inc');
 		<div id="menu" class="menu_toggle_close">
 			<ul>
 				<li id="menu_toggle">Menu <div class="arrow-down"></div></li>
-				<li class="menu_item"><a href="record.html">Start Webcam</a></li>
+				<li class="menu_item"><a href="record.php">Start Webcam</a></li>
 				<li class="menu_item"><a href=".">View Webcam</a></li>
 				<li class="menu_item"><a href="snapshots.php">Snapshots</a></li>
 				<li class="menu_item"><a href="recordings.php">Recordings</a></li>
