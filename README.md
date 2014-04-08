@@ -86,7 +86,7 @@ There are a couple of important settings you might want to change before using
 this app.
 
 1. The Admin password is defaulted to: 1qazxsw2
-  * Edit the **auth.inc** file located in the /webcam folder, and change the password there.
+  * Edit the **auth.php** file located in the /webcam folder, and change the password there.
 2. The WebSocket Server is defaulted to: localhost:5000
   * Edit the **config.json** file, and replace "locahost:5000" with the
 URL of the production WebSocket Server.

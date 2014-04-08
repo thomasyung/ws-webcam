@@ -1,5 +1,5 @@
 <?php 
-require_once('auth.inc');
+require_once('auth.php');
 ?>
 <!DOCTYPE html>
 <html>
